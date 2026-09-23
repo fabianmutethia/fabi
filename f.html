@@ -1,0 +1,603 @@
+
+    <title>Fabian Mutethia | Graphic Designer</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f0f0f;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(15, 15, 15, 0.95);
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00e5ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #00e5ff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 8% 60px;
+            background: linear-gradient(135deg, #111111, #151515);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00e5ff;
+        }
+
+        .hero p {
+            font-size: 21px;
+            color: #cccccc;
+            margin-bottom: 35px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #00e5ff;
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-4px);
+            background: white;
+        }
+
+        .button-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid #00e5ff;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            color: #00e5ff;
+        }
+
+        /* ABOUT */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-box {
+            background: #191919;
+            padding: 35px;
+            border-radius: 15px;
+        }
+
+        .about-box h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #00e5ff;
+        }
+
+        .about-box p {
+            color: #cccccc;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: #191919;
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: #202020;
+        }
+
+        .service-card .icon {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 12px;
+            color: #00e5ff;
+        }
+
+        .service-card p {
+            color: #bbbbbb;
+        }
+
+        /* PORTFOLIO */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            height: 230px;
+            background: linear-gradient(135deg, #00e5ff, #333);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.03);
+        }
+
+        .project h3 {
+            font-size: 25px;
+        }
+
+        /* SKILLS */
+        .skills {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .bar {
+            height: 10px;
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            background: #00e5ff;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #bbbbbb;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin: 30px auto;
+            max-width: 500px;
+            background: #191919;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .contact-info p {
+            margin: 12px;
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #080808;
+            color: #888;
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav ul {
+                gap: 12px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .about,
+            .services,
+            .portfolio {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">FM DESIGN</div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Hi, I'm <span>Fabian</span>
+            </h1>
+
+            <p>
+                A creative Graphic Designer passionate about creating
+                powerful visuals, memorable brands and designs that
+                communicate ideas.
+            </p>
+
+            <a href="#portfolio" class="button">
+                View My Work
+            </a>
+
+            <a href="#contact" class="button button-outline">
+                Hire Me
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <div class="about">
+
+            <div class="about-box">
+
+                <h3>Who I Am</h3>
+
+                <p>
+                    I am Fabian Mutethia, a passionate graphic designer
+                    who enjoys transforming ideas into creative and
+                    visually appealing designs.
+                </p>
+
+                <br>
+
+                <p>
+                    I create designs for businesses, organizations,
+                    individuals and events. My goal is to make every
+                    design professional, attractive and meaningful.
+                </p>
+
+            </div>
+
+            <div class="about-box">
+
+                <h3>My Mission</h3>
+
+                <p>
+                    My mission is to help individuals and businesses
+                    communicate their ideas through creative visual
+                    design.
+                </p>
+
+                <br>
+
+                <p>
+                    I believe great design is not just about looking
+                    good — it should communicate a message.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+    <section id="services">
+
+        <h2 class="section-title">
+            My <span>Services</span>
+        </h2>
+
+        <div class="services">
+
+            <div class="service-card">
+
+                <div class="icon">🎨</div>
+
+                <h3>Graphic Design</h3>
+
+                <p>
+                    Professional posters, flyers, banners,
+                    social media graphics and promotional designs.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">💼</div>
+
+                <h3>Branding</h3>
+
+                <p>
+                    Logos, brand identity, business cards and
+                    other materials that make your brand stand out.
+                </p>
+
+            </div>
+
+
+            <div class="service-card">
+
+                <div class="icon">📱</div>
+
+                <h3>Social Media Design</h3>
+
+                <p>
+                    Attractive social media posts, advertisements
+                    and graphics designed to capture attention.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+
+        <h2 class="section-title">
+            My <span>Portfolio</span>
+        </h2>
+
+        <div class="portfolio">
+
+            <div class="project">
+                <h3>Church Posters</h3>
+            </div>
+
+            <div class="project">
+                <h3>Business Posters</h3>
+            </div>
+
+            <div class="project">
+                <h3>Social Media Designs</h3>
+            </div>
+
+            <div class="project">
+                <h3>Logo Designs</h3>
+            </div>
+
+            <div class="project">
+                <h3>Event Banners</h3>
+            </div>
+
+            <div class="project">
+                <h3>Advertising Designs</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section>
+
+        <h2 class="section-title">
+            My <span>Skills</span>
+        </h2>
+
+        <div class="skills">
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>Graphic Design</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="progress" style="width:90%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>Poster Design</span>
+                    <span>95%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="progress" style="width:95%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>Branding</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="progress" style="width:80%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>Social Media Design</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="bar">
+                    <div class="progress" style="width:90%;"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2 class="section-title">
+            Let's <span>Work Together</span>
+        </h2>
+
+        <div class="contact">
+
+            <p>
+                Have a project in mind? I'd love to hear from you.
+            </p>
+
+            <div class="contact-info">
+
+                <p>📧 Email: yourname@email.com</p>
+
+                <p>📱 Phone: +254 700 000 000</p>
+
+                <p>📍 Location: Kenya</p>
+
+            </div>
+
+            <a href="mailto:yourname@email.com" class="button">
+                Contact Me
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Fabian Mutethia. All Rights Reserved.
+        </p>
+
+        <p>
+            Graphic Designer | Creative | Visual Storyteller
+        </p>
+
+    </footer>
+
+</body>
+</html>
